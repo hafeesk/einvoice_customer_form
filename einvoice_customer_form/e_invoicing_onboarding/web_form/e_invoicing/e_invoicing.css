@@ -1,0 +1,95 @@
+/* UAE e-Invoicing customer form — matches the reference layout */
+.eicm-page {
+	--eicm-navy: #0b3d6e;
+	--eicm-blue: #0a6fb8;
+	--eicm-sky: #e8f3fb;
+	--eicm-line: #dfe6ee;
+	--eicm-text: #1d2733;
+	--eicm-muted: #5d6b7a;
+	background: #eef2f6;
+}
+.eicm-page .web-form-container,
+.eicm-page .web-form-wrapper { background: transparent; box-shadow: none; border: 0; padding: 0; max-width: none; }
+
+/* hero */
+.eicm-hero { background: linear-gradient(120deg, #06305a 0%, #0a4f8a 60%, #0b6aa8 100%); color: #fff; margin: 0 calc(50% - 50vw) 24px; padding: 36px 0 44px; }
+.eicm-hero-inner { max-width: 1180px; margin: 0 auto; padding: 0 20px; display: flex; gap: 28px; align-items: flex-start; }
+.eicm-logo { background: #fff; border-radius: 14px; padding: 18px 22px; min-width: 200px; display: flex; align-items: center; justify-content: center; }
+.eicm-logo img { max-height: 48px; max-width: 170px; }
+.eicm-company { color: #b9d8f2; font-weight: 600; font-size: 14px; }
+.eicm-hero h1 { color: #fff; font-size: 30px; font-weight: 700; margin: 6px 0 10px; }
+.eicm-hero p { color: #dbe9f6; max-width: 760px; line-height: 1.6; }
+.eicm-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.eicm-pill { border: 1px solid rgba(255,255,255,.35); background: rgba(255,255,255,.1); border-radius: 999px; padding: 7px 14px; font-size: 13px; }
+
+/* shell */
+.eicm-shell { display: grid; grid-template-columns: 290px 1fr; gap: 28px; max-width: 1180px; margin: 0 auto; align-items: start; }
+.eicm-aside { position: sticky; top: 16px; display: flex; flex-direction: column; gap: 16px; }
+.eicm-card { background: #fff; border: 1px solid var(--eicm-line); border-radius: 14px; padding: 20px; box-shadow: 0 1px 2px rgba(16,40,70,.04); }
+.eicm-bar { height: 8px; border-radius: 8px; background: #e6ecf2; overflow: hidden; }
+.eicm-bar span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--eicm-navy), var(--eicm-blue)); transition: width .3s; }
+.eicm-count { font-size: 13px; color: var(--eicm-muted); margin: 10px 0 12px; }
+.eicm-nav { display: flex; align-items: center; gap: 12px; padding: 9px 10px; border-radius: 10px; color: var(--eicm-text) !important; text-decoration: none !important; }
+.eicm-nav:hover { background: #f1f5f9; }
+.eicm-num { width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--eicm-sky); border: 1px solid #bfdcf2; color: var(--eicm-navy); font-size: 13px; font-weight: 600; flex-shrink: 0; }
+.eicm-nav.done .eicm-num { background: #1f9d55; border-color: #1f9d55; color: #fff; }
+.eicm-details h6, .eicm-help h6 { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--eicm-muted); margin-bottom: 10px; }
+.eicm-details label { display: block; font-size: 12px; color: var(--eicm-muted); margin: 10px 0 2px; }
+.eicm-details div { font-weight: 600; color: var(--eicm-text); }
+.eicm-help a { color: var(--eicm-blue); text-decoration: underline; }
+
+.eicm-banner { background: var(--eicm-sky); border: 1px solid #c7e1f5; color: #0b4f86; border-radius: 12px; padding: 14px 18px; margin-bottom: 20px; }
+
+/* section cards */
+.eicm-main .form-section { background: #fff; border: 1px solid var(--eicm-line) !important; border-radius: 14px; padding: 22px 26px !important; margin-bottom: 20px !important; }
+.eicm-main .form-section.eicm-cont { border-top: 0 !important; border-top-left-radius: 0; border-top-right-radius: 0; margin-top: -34px !important; padding-top: 4px !important; }
+.eicm-main .form-section.eicm-section:has(+ .form-section.eicm-cont) { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.eicm-head { display: flex !important; gap: 16px; align-items: flex-start; margin-bottom: 18px !important; padding: 0 !important; }
+.eicm-badge { width: 40px; height: 40px; border-radius: 9px; background: linear-gradient(135deg, var(--eicm-navy), var(--eicm-blue)); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+.eicm-title { font-size: 20px; font-weight: 700; color: var(--eicm-navy); }
+.eicm-sub { font-size: 14px; color: var(--eicm-muted); font-weight: 400; margin-top: 2px; }
+
+.eicm-main .control-label, .eicm-main .form-group .control-label { font-weight: 600; color: var(--eicm-text); font-size: 14px; }
+.eicm-main .form-control { min-height: 46px; border: 1px solid #d6dee7; border-radius: 9px; background: #fff; font-size: 15px; }
+.eicm-main .form-control:focus { border-color: var(--eicm-blue); box-shadow: 0 0 0 3px rgba(10,111,184,.15); }
+.eicm-main .form-control[readonly] { background: #fff; color: var(--eicm-text); }
+.eicm-main .help-box, .eicm-main .help-box p { color: var(--eicm-muted); font-size: 12.5px; }
+.eicm-muted { color: var(--eicm-muted); font-weight: 400; }
+
+/* registration type cards */
+.eicm-regcards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.eicm-regcard { display: flex; gap: 12px; border: 1px solid #d6dee7; border-radius: 10px; padding: 14px 16px; cursor: pointer; }
+.eicm-regcard b { display: block; color: var(--eicm-navy); font-size: 16px; }
+.eicm-regcard small { color: var(--eicm-muted); }
+.eicm-regcard.active { border-color: var(--eicm-blue); background: #f3f9fe; box-shadow: 0 0 0 2px rgba(10,111,184,.15); }
+.eicm-radio { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #9aa8b6; flex-shrink: 0; margin-top: 2px; }
+.eicm-regcard.active .eicm-radio { border: 6px solid var(--eicm-blue); }
+
+/* attachments as drop zones */
+.eicm-main .frappe-control[data-fieldtype="Attach"] .control-input,
+.eicm-main .frappe-control[data-fieldtype="Attach"] .attached-file { border: 2px dashed #b8c6d4; border-radius: 12px; background: #f8fafc; padding: 26px 16px; text-align: center; }
+.eicm-main .frappe-control[data-fieldtype="Attach"] .btn { background: transparent; border: 0; color: var(--eicm-blue); font-weight: 600; text-decoration: underline; box-shadow: none; }
+.eicm-main .frappe-control[data-fieldtype="Attach"] .btn::before { content: "⬆"; display: block; font-size: 26px; color: var(--eicm-blue); text-decoration: none; margin-bottom: 6px; }
+
+/* declaration */
+.eicm-decl { background: #f3f6f9; border-left: 4px solid var(--eicm-blue); border-radius: 8px; padding: 16px 20px; color: #39485a; line-height: 1.6; margin-bottom: 16px; }
+.eicm-main .frappe-control[data-fieldtype="Check"] label { font-weight: 700; font-size: 15px; }
+
+/* footer */
+.eicm-page .web-form-footer { background: #fff; border: 1px solid var(--eicm-line); border-radius: 14px; padding: 22px 26px; display: flex; align-items: center; gap: 20px; }
+.eicm-page .web-form-footer .btn-primary { background: linear-gradient(90deg, var(--eicm-navy), var(--eicm-blue)); border: 0; border-radius: 10px; padding: 12px 30px; font-size: 16px; font-weight: 600; box-shadow: 0 6px 14px rgba(10,79,138,.25); }
+.eicm-page .web-form-footer .btn-primary::after { content: " →"; }
+.eicm-foot-note { color: var(--eicm-muted); font-size: 13px; max-width: 520px; }
+
+/* invalid link */
+.eicm-invalid { max-width: 640px; margin: 40px auto; text-align: center; }
+.eicm-invalid-logo { max-height: 50px; margin-bottom: 8px; }
+.eicm-invalid h2 { color: var(--eicm-navy); margin-top: 10px; }
+
+@media (max-width: 900px) {
+	.eicm-shell { grid-template-columns: 1fr; }
+	.eicm-aside { position: static; }
+	.eicm-hero-inner { flex-direction: column; }
+	.eicm-regcards { grid-template-columns: 1fr; }
+	.eicm-page .web-form-footer { flex-direction: column; align-items: flex-start; }
+}

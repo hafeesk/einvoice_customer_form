@@ -1,0 +1,397 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:EICM-{YYYY}-{#####}",
+ "creation": "2026-11-25 15:30:00.000000",
+ "modified": "2026-11-25 15:30:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "status",
+  "col_meta",
+  "submitted_on",
+  "submitted_ip",
+  "sec_company",
+  "legal_name",
+  "registration_type",
+  "issuing_authority",
+  "tl_cd_number",
+  "col_company",
+  "tin",
+  "trn",
+  "peppol_participant_id",
+  "sec_address",
+  "building_name",
+  "area",
+  "col_address",
+  "street",
+  "emirate",
+  "sec_address_country",
+  "country",
+  "sec_contact",
+  "contact_person",
+  "sec_contact_2",
+  "email_id",
+  "col_contact",
+  "mobile_no",
+  "sec_golive",
+  "asp_status",
+  "asp_name",
+  "col_golive",
+  "expected_go_live_date",
+  "sec_attachments",
+  "trade_license_attachment",
+  "col_attachments",
+  "trc_attachment",
+  "sec_declaration",
+  "declaration_text",
+  "agree_declaration",
+  "ref"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "New\nReviewed\nApplied\nRejected",
+   "default": "New",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "col_meta",
+   "fieldtype": "Column Break",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "submitted_on",
+   "fieldtype": "Datetime",
+   "label": "Submitted on",
+   "read_only": 1,
+   "in_list_view": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "submitted_ip",
+   "fieldtype": "Data",
+   "label": "Submitted from IP",
+   "read_only": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "sec_company",
+   "fieldtype": "Section Break",
+   "label": "Company & Registration Details",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "legal_name",
+   "fieldtype": "Data",
+   "label": "Legal / registered entity name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "registration_type",
+   "fieldtype": "Select",
+   "label": "Registration type",
+   "reqd": 1,
+   "options": "\nTrade License (TL)\nCabinet Decision (CD)",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "issuing_authority",
+   "fieldtype": "Select",
+   "label": "Trade licence issuing authority",
+   "reqd": 1,
+   "options": "\nAbu Dhabi Department of Economic Development (ADDED)\nDubai Department of Economy and Tourism (DET)\nSharjah Economic Development Department (SEDD)\nAjman Department of Economic Development\nUmm Al Quwain Department of Economic Development\nRas Al Khaimah Department of Economic Development\nFujairah Department of Economic Development\nJebel Ali Free Zone (JAFZA)\nDubai Multi Commodities Centre (DMCC)\nDubai Airport Freezone (DAFZA)\nDubai South Free Zone\nDubai International Financial Centre (DIFC)\nAbu Dhabi Global Market (ADGM)\nKhalifa Economic Zones Abu Dhabi (KEZAD)\nAbu Dhabi Airports Free Zone\nMasdar City Free Zone\ntwofour54\nSharjah Airport International Free Zone (SAIF)\nHamriyah Free Zone\nAjman Free Zone\nRas Al Khaimah Economic Zone (RAKEZ)\nFujairah Free Zone\nUmm Al Quwain Free Trade Zone\nFederal Cabinet / Government\nOther",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "tl_cd_number",
+   "fieldtype": "Data",
+   "label": "TL / CD No.",
+   "reqd": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "col_company",
+   "fieldtype": "Column Break",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "tin",
+   "fieldtype": "Data",
+   "label": "TIN (Tax Identification No.)",
+   "reqd": 1,
+   "description": "10 digits: the first 10 digits of your TRN.",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "trn",
+   "fieldtype": "Data",
+   "label": "TRN (VAT registration no.)",
+   "description": "15 digits. Leave blank if not VAT registered.",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "peppol_participant_id",
+   "fieldtype": "Data",
+   "label": "Peppol Participant ID",
+   "reqd": 1,
+   "description": "Format 0235:TIN, e.g. 0235:1000011930. Filled in from your TIN as you type it.",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "sec_address",
+   "fieldtype": "Section Break",
+   "label": "Registered Address",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "building_name",
+   "fieldtype": "Data",
+   "label": "Building name",
+   "reqd": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Data",
+   "label": "Area",
+   "reqd": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "col_address",
+   "fieldtype": "Column Break",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "street",
+   "fieldtype": "Data",
+   "label": "Street",
+   "reqd": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "emirate",
+   "fieldtype": "Select",
+   "label": "Emirate",
+   "reqd": 1,
+   "options": "\nAbu Dhabi\nDubai\nSharjah\nAjman\nUmm Al Quwain\nRas Al Khaimah\nFujairah\nOutside UAE",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "sec_address_country",
+   "fieldtype": "Section Break",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "reqd": 1,
+   "default": "United Arab Emirates",
+   "description": "United Arab Emirates. Choose \"Outside UAE\" above to enter another country.",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "sec_contact",
+   "fieldtype": "Section Break",
+   "label": "Contact Details",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact person name",
+   "reqd": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "sec_contact_2",
+   "fieldtype": "Section Break",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID",
+   "reqd": 1,
+   "options": "Email",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "col_contact",
+   "fieldtype": "Column Break",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile no.",
+   "reqd": 1,
+   "default": "+971",
+   "description": "With the country code, e.g. +971 50 123 4567.",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "sec_golive",
+   "fieldtype": "Section Break",
+   "label": "e-Invoicing Go-live",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "asp_status",
+   "fieldtype": "Select",
+   "label": "Have you appointed an Accredited Service Provider (ASP)?",
+   "reqd": 1,
+   "options": "\nYes\nIn progress\nNo",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "asp_name",
+   "fieldtype": "Data",
+   "label": "ASP name",
+   "depends_on": "eval:doc.asp_status=='Yes' || doc.asp_status=='In progress'",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "col_golive",
+   "fieldtype": "Column Break",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "expected_go_live_date",
+   "fieldtype": "Date",
+   "label": "Expected go-live date",
+   "reqd": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "sec_attachments",
+   "fieldtype": "Section Break",
+   "label": "Required Attachments",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "trade_license_attachment",
+   "fieldtype": "Attach",
+   "label": "Trade License / Cabinet Decision",
+   "reqd": 1,
+   "description": "PDF, JPG or PNG · up to 10 MB",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "col_attachments",
+   "fieldtype": "Column Break",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "trc_attachment",
+   "fieldtype": "Attach",
+   "label": "Tax Registration Certificate",
+   "reqd": 1,
+   "description": "PDF, JPG or PNG · up to 10 MB",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "sec_declaration",
+   "fieldtype": "Section Break",
+   "label": "Declaration",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "declaration_text",
+   "fieldtype": "HTML",
+   "options": "<p>I confirm that the information provided in this form is accurate, complete and current; that I am authorised to submit it on behalf of the organisation named above; and that I will notify us of any changes to our tax registration number or business details that may affect e-Invoicing.</p>",
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "agree_declaration",
+   "fieldtype": "Check",
+   "label": "I agree to the above declaration.",
+   "reqd": 1,
+   "doctype": "DocField"
+  },
+  {
+   "fieldname": "ref",
+   "fieldtype": "Data",
+   "label": "Link reference",
+   "hidden": 1,
+   "read_only": 1,
+   "doctype": "DocField"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "module": "E-Invoicing Onboarding",
+ "name": "E-Invoicing Customer Master",
+ "naming_rule": "Expression",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "doctype": "DocPerm"
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "doctype": "DocPerm"
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "doctype": "DocPerm"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "legal_name",
+ "track_changes": 1
+}
